@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>BATHROOM BIODOME</title>
+
+  <!-- Adobe Fonts: burnaby-stencil -->
+  <style>
+    @import url("https://use.typekit.net/clq1fnf.css");
+  </style>
+
+  <!-- Spoqa Han Sans Neo -->
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+
+  <style>
+    /* 전체 기본 폰트: 스포카 */
+    * {
+      font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    }
+
+    body {
+      margin: 0;
+      background-color: black;
+      color: limegreen;
+    }
+
+    body {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE10+ */
+}
+
+    .wrap 
+    {width: 900px !important;
+    margin: 0 auto;}
+
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('bath.jpg'); /* 실제 이미지 경로로 수정 */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-text {
+      font-family: burnaby-stencil, sans-serif; /* 타이틀만 burnaby 적용 */
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10vw;
+      line-height: 1;
+      color: #00ff00;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .second-section {
+      background-color: black;
+      padding: 300px 20px 20px;
+      text-align: center;
+    }
+
+    .second-text {
+      font-size: 2.7vw;
+      font-weight: bold;
+      color: #00ff00;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .gif-combo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 0; /* 붙여서 보이게 하려면 간격 없음 */
+}
+
+    .gif-combo img {
+     max-width: 30%;
+     height: auto;
+      display: block;
+}
+.looping-gif {
+  max-width: 30%;
+  height: auto;
+  display: block;
+}
+
+.third-section {
+  background-color: black;
+  color: white;
+  padding: 200px 5vw;
+}
+
+.hotspot-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hotspot-header p {
+  font-size: 2vw;
+  margin: 0;
+  margin-bottom: -30px;
+}
+
+.hotspot-header h2 {
+  font-size: 4vw;
+  color: #00ff00;
+  margin-bottom: 40px;
+}
+
+.hotspot-content {
+  position: relative;
+  width: 100%;
+  height: 900px; /* 조절 가능 */
+}
+
+.hotspot-text {
+  position: absolute;
+  top: 10px;
+  left: 70%;
+  transform: translateX(-10%);
+  text-align: left;
+  font-size: 1.1vw;
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.hotspot-images {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hotspot-images img {
+  position: absolute;
+  height: auto;
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+.img1 { top: 0px; right: 0%;  width: 400px;}
+.img2 { top: 570px; left: 0%; 
+width: 700px;}
+.img3 { top: 270px; left: 40%;   width: 200px;}
+.img4 {top: 0px; left: 0%; width: 300px;}
+.img5 { top: 100px; left: 45%;    width: 200px; }
+.img6 { top: 680px; left: 38%;   width: 150px;}
+.img7 { top: 630px; left: 58%;   width: 200px;}
+.img8 { top: 680px; right: 0%;   width: 200px;}
+.img9 { top: 530px; right: 0%;   width: 200px;}
+.img10 { top: 430px; right: 5%;   width: 200px;}
+.img11 { top: 200px; right: 0%;  width: 400px;}
+.img12 { top: 270px; left: 35%;   width: 200px;}
+.img13 { top: 270px; left: 20%;   width: 200px;}
+.img14 { top: 270px; left: 0%;   width: 200px;}
+.img15 { top: 480px; left: 8%;   width: 150px;}
+.img16 { top: 100px; left: 35%;    width: 200px; }
+.img17 { top: 00px; left: 25%;    width: 200px; }
+
+@keyframes slowHue {
+  0%   { filter: hue-rotate(0deg); }
+  25%  { filter: hue-rotate(30deg); }
+  50%  { filter: hue-rotate(-20deg); }
+  75%  { filter: hue-rotate(50deg); }
+  100% { filter: hue-rotate(0deg); }
+}
+
+.glitch-hue {
+  animation: slowHue 8s ease-in-out forwards;
+}
+
+.hotspot-images img:hover {
+  animation: slowHue 8s ease-in-out infinite;
+}
+
+@keyframes appearAndHue {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(40deg);
+  }
+}
+
+.img {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: none;
+}
+.img.glitch-hue {
+  animation: appearAndHue 0.8s ease-out forwards;
+}
+
+.location-bacteria {
+  background-color: black;
+  color: #00ff00;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.location-title {
+  font-size: 3vw;
+  margin-bottom: 40px;
+}
+
+.bacteria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 60px;
+  justify-items: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bacteria-grid img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bacteria-grid img:hover {
+  transform: scale(1.1);
+}
+
+
+/* 개별 이미지 크기 지정 (우선순위 높이기 위해 !important 사용) */
+.img-large {
+  width: 290px !important;
+}
+
+.img-small {
+  width: 140px !important;
+}
+
+.img-wide {
+  width: 200px !important;
+}
+
+/* 기본 공통 강조 스타일 */
+.grade div {
+  padding: 5px 12px;
+  border: 1px solid limegreen;
+  display: inline-block;
+  min-width: 400px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+/* 등급별 강조 스타일 */
+.highlight-10 {
+  background-color: #7CFC00; /* 연두색 */
+  color: black;
+  font-weight: bold;
+  border: 2px solid #7CFC00;
+  box-shadow: 0 0 10px #7CFC00;
+}
+
+.highlight-7 {
+  background-color: #FFD700; /* 노란색 */
+  color: black;
+  font-weight: bold;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 10px #FFD700;
+}
+
+.highlight-4 {
+  background-color: #FFA500; /* 주황색 */
+  color: black;
+  font-weight: bold;
+  border: 2px solid #FFA500;
+  box-shadow: 0 0 10px #FFA500;
+}
+
+.highlight-0 {
+  background-color: #FF4500; /* 빨간색 */
+  color: white;
+  font-weight: bold;
+  border: 2px solid #FF4500;
+  box-shadow: 0 0 10px #FF4500;
+}
+
+.hero.invert {
+  filter: invert(1);
+  transition: filter 0.4s ease;
+}
+
+.hero-text {
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+    .draggable-icon {
+  width: 70px;       
+  height: auto;
+  cursor: grab;
+  display: block;
+}
+
+    .calendar-table {
+      width: 60%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    .calendar-table th, .calendar-table td {
+      border: 1px solid #444;
+      width: 14%;
+      height: 80px;
+      vertical-align: top;
+      padding: 4px;
+      font-size: 1vw;
+      position: relative;
+    }
+    .calendar-table td {
+      background-color: black;
+    }
+    .calendar-table .day-number {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      color: #fff;
+      font-size: 0.9vw;
+    }
+    .calendar-table .icon-dropzone {
+      text-align: center;
+      padding-top: 6px;
+      min-height: 30px;
+    }
+    .calendar-table .icon-dropzone {
+  min-height: 60px;         /* 최소 높이 확보 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+    .calendar-table thead th {
+  height: 30px; /* 원하는 만큼 줄이기 */
+  padding: 4px;
+  font-size: 0.9vw;
+}
+
+.border-10 {
+  border: 4px solid #7CFC00;
+  box-shadow: 0 0 12px #7CFC00;
+  transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.border-7 {
+  border: 4px solid #FFD700;
+  box-shadow: 0 0 12px #FFD700;
+  transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.border-4 {
+  border: 4px solid #FFA500;
+  box-shadow: 0 0 12px #FFA500;
+  transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.border-0 {
+  border: 4px solid #FF4500;
+  box-shadow: 0 0 12px #FF4500;
+  transition: border 0.4s ease, box-shadow 0.4s ease;
+}
+
+.floating-bacteria {
+  position: fixed;
+  width: 30px;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  z-index: 9999;
+  filter: hue-rotate(100deg) saturate(150%) brightness(140%) drop-shadow(0 0 6px #00ff00);
+
+}
+
+.side-nav {
+  position: absolute; /* 고정 아님 */
+  top: 100px;
+  right: 80px; 
+  z-index: 9999;
+  transition: top 0.3s ease-out;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin: 10px 0;
+}
+
+.side-nav a {
+  display: block;
+  padding: 10px 15px;
+  background-color: rgba(0, 255, 0, 0.15);
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9vw;
+  transition: all 0.3s ease;
+}
+
+.side-nav a:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#custom-cursor {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.05s linear;
+}
+
+
+  </style>
+
+</head>
+<body>
+
+  <div id="custom-cursor"></div>
+<script>
+  const cursor = document.getElementById('custom-cursor');
+
+  window.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(${e.clientX - 20}px, ${e.clientY - 20}px)`; // 커서 중앙 정렬
+  });
+</script>
+
+
+
+
+  <nav id="side-nav" class="side-nav">
+  <ul>
+    <li><a href="#bacteria-section">위치 별 세균</a></li>
+    <li><a href="#check-section">위생 자가진단</a></li>
+    <li><a href="#reminder-section">청소 리마인더</a></li>
+  </ul>
+</nav>
+<script>
+  const nav = document.getElementById('side-nav');
+  let lastScrollY = window.scrollY;
+
+  function animateNav() {
+    const targetY = window.scrollY + window.innerHeight / 2 - nav.offsetHeight / 2;
+    lastScrollY += (targetY - lastScrollY) * 0.03; // 부드럽게 이동
+    nav.style.top = `${lastScrollY}px`;
+    requestAnimationFrame(animateNav);
+  }
+
+  animateNav();
+</script>
+
+
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">BATHROOM<br>BIODOME</div>
+    </div>
+  </section>
+
+  <!-- Second Section -->
+  <section class="second-section">
+  <div class="second-text">
+    물만 내리면 끝이라고 믿으셨다면,<br>
+    다시 생각해보셔야 할지도 모릅니다.
+  </div>
+  <div class="gif-combo">
+    <img src="left.gif" alt="좌측 화장실 GIF" class="looping-gif">
+    <img src="right.gif" alt="우측 화장실 GIF" class="looping-gif">
+  </div>
+
+  <!-- Third Section: HOT SPOT -->
+<section class="third-section wrap">
+  <div class="hotspot-header">
+    <p>세균들의 HOT SPOT</p>
+    <h2>화장실</h2>
+  </div>
+
+  <div class="hotspot-content">
+    <!-- 텍스트 -->
+    <div class="hotspot-text">
+      화장실은 타액, 피부, 소변 및 대변 등 사람의
+      분비물로부터 유래되는 미생물로 오염되어 있습니다.<br>
+      특히 화장실 접촉표면에는 다양한 미생물이 존재하며
+      인체 관련 세균들이 주도적입니다.
+    </div>
+
+    <!-- 이미지 배치 -->
+    <div class="hotspot-images wrap">
+      <img src="gg2.jpg" class="img img2">
+      <img src="gg3.jpg" class="img img3">
+      <img src="ba1.jpg" class="img img6">
+      <img src="ba2.jpg" class="img img7">
+      <img src="ba3.jpg" class="img img8">
+      <img src="ba3.jpg" class="img img9">
+      <img src="gg1.jpg" class="img img11">
+      <img src="gg3.jpg" class="img img12">
+      <img src="gg3.jpg" class="img img13">
+      <img src="gg3.jpg" class="img img14">
+      <img src="gg1.jpg" class="img img1">
+      <img src="gg4.jpg" class="img img4">
+      <img src="ba1.jpg" class="img img15">
+      <img src="ba3.jpg" class="img img10">
+      <img src="gg5.jpg" class="img img5">
+      <img src="gg5.jpg" class="img img16">
+      <img src="gg5.jpg" class="img img17">
+
+    </div>
+  </div>
+
+  <script>
+  const glitchImages = document.querySelectorAll('.hotspot-images img');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('glitch-hue');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  glitchImages.forEach(img => observer.observe(img));
+</script>
+<script>
+  const images = document.querySelectorAll('.hotspot-images .img');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const visibleImages = [...images].filter(img =>
+          img.getBoundingClientRect().top < window.innerHeight
+        );
+
+        visibleImages.forEach((img, index) => {
+          setTimeout(() => {
+            img.classList.add('glitch-hue');
+          }, index * 150); // 0.15초 간격으로 빠바박 등장
+        });
+
+        // 한 번만 실행되도록
+        observer.disconnect();
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(document.querySelector('.hotspot-images'));
+</script>
+
+</section>
+
+<section class="location-bacteria" id="bacteria-section" class="location-bacteria">
+  <h2 class="location-title">위치 별 세균</h2>
+  <div class="bacteria-grid">
+     <a href="ecoli/index.html">
+    <img src="tt1.png" class="img-large" alt="위치 1">
+      </a>
+      <a href="legio/index.html">
+    <img src="tt2.png" class="img-large"alt="위치 2">
+      </a>
+       <a href="Clado/index.html">
+    <img src="tt3.jpg" alt="위치 3">
+      </a>
+      <a href="staphy/index.html">
+    <img src="tt4.png" alt="위치 4">
+      </a>
+      <a href="slamo/index.html">
+    <img src="tt5.png" class="img-large" alt="위치 5">
+      </a>
+      <a href="kleb/index.html">
+    <img src="tt6.png" alt="위치 6">
+      </a>
+  </div>
+</section>
+
+
+
+<!-- 위생 자가진단 테스트 섹션 시작 -->
+<section class="check-section wrap border-0" style="padding: 120px 5vw; background-color: #000000; color: white;" id="check-section" class="check-section wrap border-0">
+
+
+  <h1 style="color: #00ff00; font-size: 3vw; margin-bottom: 40px;">위생 자가진단 테스트</h1>
+
+  <table style="width: 100%; border-collapse: collapse; max-width: 900px; margin: auto;">
+    <tbody id="checklist">
+       <tr style="border-top: 2px solid #00ff00;">
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">1. 변기 뚜껑을 닫고 물을 내립니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">2. 변기 손잡이나 버튼을 일주일에 한 번 이상 닦습니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">3. 칫솔이나 세면용품을 뚜껑 없이 변기 근처에 두고 있습니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">4. 세면대 배수구를 한 달에 한 번 이상 청소합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">5. 손을 씻은 후 개인 수건이나 자연 건조를 사용합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">6. 수건을 3일 이내에 한 번씩 교체합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">7. 샤워볼/때타올을 한 달 이내에 교체합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">8. 사용한 수건이나 샤워용품을 잘 건조되는 곳에 걸어둡니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">9. 칫솔을 뚜껑 없이 바람이 잘 통하는 곳에 보관합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">10. 칫솔을 3개월 이내에 교체합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">11. 칫솔을 변기에서 멀리 떨어진 위치에 보관합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+      <tr style="border-bottom: 2px solid #00ff00;">
+        <td style="padding: 16px; font-size: 1.2vw; text-align: left;">12. 화장실에 창문/환풍기가 있어 주기적으로 환기합니까?</td>
+        <td><input type="checkbox" style="transform: scale(1.3);"></td>
+      </tr>
+  <td colspan="2" style="padding: 16px; text-align: right; font-size: 1.3vw;">
+     총 체크 수: <span id="score">0</span>
+  </td>
+</tr>
+    </tbody>
+  </table>
+
+  
+
+  <div class="grade" style="margin-top: 50px; line-height: 2; text-align: center; font-size: 1.1vw;">
+    <div id="grade-10">10~12개: 위생 관리 우수 (안심 등급)</div>
+    <div id="grade-7">7~9개: 보통 (주의 필요)</div>
+    <div id="grade-4">4~6개: 위험 (청소 루틴 점검 필요)</div>
+    <div id="grade-0">0~3개: 고위험 (세균 번식 환경)</div>
+  </div>
+</section>
+
+
+<script>
+  // 요소 선택
+  const checkboxes = document.querySelectorAll('#checklist input[type=checkbox]');
+  const scoreDisplay = document.getElementById('score');
+  const grade10 = document.getElementById('grade-10');
+  const grade7 = document.getElementById('grade-7');
+  const grade4 = document.getElementById('grade-4');
+  const grade0 = document.getElementById('grade-0');
+  const section = document.querySelector('.check-section');
+
+  // 점수 계산 및 UI 반영 함수
+  function updateScore() {
+    const count = document.querySelectorAll('#checklist input[type="checkbox"]:checked').length;
+
+    // 점수 표시
+    scoreDisplay.textContent = count;
+
+    // 등급 강조 초기화
+    grade10.classList.remove('highlight-10');
+    grade7.classList.remove('highlight-7');
+    grade4.classList.remove('highlight-4');
+    grade0.classList.remove('highlight-0');
+
+    // 테두리 색 초기화
+    section.classList.remove('border-10', 'border-7', 'border-4', 'border-0');
+
+    // 점수에 따라 등급 강조 + 테두리 색상 적용
+    if (count >= 10) {
+      grade10.classList.add('highlight-10');
+      section.classList.add('border-10');
+    } else if (count >= 7) {
+      grade7.classList.add('highlight-7');
+      section.classList.add('border-7');
+    } else if (count >= 4) {
+      grade4.classList.add('highlight-4');
+      section.classList.add('border-4');
+    } else {
+      grade0.classList.add('highlight-0');
+      section.classList.add('border-0');
+    }
+  }
+
+  // 체크박스에 이벤트 연결
+  checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
+
+  // 페이지 로드시 초기 점수 반영
+  updateScore();
+</script>
+
+
+<script>
+  const hero = document.querySelector('.hero');
+  const heroText = document.querySelector('.hero-text');
+
+  heroText.addEventListener('mouseenter', () => {
+    hero.classList.add('invert');
+  });
+
+  heroText.addEventListener('mouseleave', () => {
+    hero.classList.remove('invert');
+  });
+
+</script>
+
+
+ <section class="calendar-section" style="text-align: center; padding: 300px 20px; background: black; color: white;" id="reminder-section" class="calendar-section">
+    <h2 style="font-size: 3vw; color: #00ff00;">청소 리마인더</h2>
+    <p style="padding-bottom: 30px; padding-top: -20px;">이미지를 드래그해서 달력을 채워보세요 </p>
+
+    <!-- 청소 아이콘 목록 -->
+
+   <div id="icon-palette" style="display: flex; justify-content: center; gap: 40px;  padding-bottom: 30px; ">
+  <div style="text-align: center;">
+    <img src="tt2.png" class="draggable-icon" draggable="true" data-type="sink">
+    <div style="color: white; font-size: 0.9vw; padding-top:20px;">월 2회</div>
+  </div>
+  <div style="text-align: center;">
+    <img src="tt4.png" class="draggable-icon" draggable="true" data-type="toothbrush">
+    <div style="color: white; font-size: 0.9vw; padding-top:20px;">월 1회</div>
+  </div>
+  <div style="text-align: center;">
+    <img src="tt1.png" class="draggable-icon" draggable="true" data-type="toilet">
+    <div style="color: white; font-size: 0.9vw; padding-top:20px;">주 2회</div>
+  </div>
+  <div style="text-align: center;">
+    <img src="tt3.jpg" class="draggable-icon" draggable="true" data-type="tile">
+    <div style="color: white; font-size: 0.9vw; padding-top:20px;">주 1회</div>
+  </div>
+  <div style="text-align: center;">
+    <img src="tt6.png" class="draggable-icon" draggable="true" data-type="scrubber">
+    <div style="color: white; font-size: 0.9vw; padding-top:20px;">월 1회</div>
+  </div>
+</div>
+
+
+<div class="wrap">
+  <div class="calendar-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+    
+    <!-- 가운데 정렬 유지를 위한 여백용 div -->
+    <div style="width: 150px;"></div>
+    
+    <!-- 중앙: 달 제목 -->
+    <div style="text-align: center; flex-grow: 1;">
+      <button id="prev-month" style="font-size: 2vw; background: none; border: none; color: #00ff00; cursor: pointer;">⟨</button>
+      <h3 id="calendar-title" style=" display: inline-block; margin: 0 20px; font-size: 1.8vw;">2025년 6월</h3>
+      <button id="next-month" style="font-size: 2vw; background: none; border: none; color: #00ff00; cursor: pointer;">⟩</button>
+    </div>
+
+    <!-- 오른쪽: 버튼 그룹 -->
+    <div style="display: flex; gap: 12px;">
+      <button onclick="resetCalendar()" style="padding: 6px 12px;">초기화</button>
+      <div id="trash-bin"
+           ondragover="allowDrop(event)" 
+           ondrop="trashDrop(event)"
+           style="width: 50px; height: 50px; background: red; color: white; font-size: 20px; display: flex; justify-content: center; align-items: center; border-radius: 4px; cursor: pointer;">
+        🗑
+    
+    </div>
+    
+  </div>
+</div>
+
+    
+
+</div>
+<!-- 캘린더 리셋 함수 -->
+<script>
+function resetCalendar() {
+  document.querySelectorAll('.icon-dropzone').forEach(zone => zone.innerHTML = '');
+}
+
+// 휴지통으로 드롭 시 삭제
+function trashDrop(e) {
+  e.preventDefault();
+  const draggedImg = document.querySelector('.dragging');
+  if (draggedImg && draggedImg.parentNode) {
+    draggedImg.remove();
+  }
+}
+
+// 드래그 시작 시 클래스 추가 (삭제 대상 확인용)
+document.addEventListener('dragstart', e => {
+  if (e.target.tagName === 'IMG' && e.target.closest('.icon-dropzone')) {
+    e.target.classList.add('dragging');
+  }
+});
+
+document.addEventListener('dragend', e => {
+  document.querySelectorAll('.dragging').forEach(el => el.classList.remove('dragging'));
+});
+</script>
+
+
+    <!-- 달력 표시 영역 -->
+    <div id="calendar-container"></div>
+  </section>
+
+  <script>
+    const monthData = {
+      6: { name: "6월", startDay: 6, days: 30 },
+      7: { name: "7월", startDay: 1, days: 31 },
+      8: { name: "8월", startDay: 4, days: 31 },
+    };
+
+    let currentMonth = 6;
+    const title = document.getElementById("calendar-title");
+    const container = document.getElementById("calendar-container");
+
+    function generateCalendar(month) {
+      const { name, startDay, days } = monthData[month];
+      title.textContent = `2025년 ${name}`;
+      let table = '<table class="calendar-table"><thead><tr>';
+      ['일','월','화','수','목','금','토'].forEach(d => table += `<th>${d}</th>`);
+      table += '</tr></thead><tbody><tr>';
+
+      let cell = 0;
+      for (let i = 0; i < startDay; i++) {
+        table += '<td></td>'; cell++;
+      }
+
+      for (let day = 1; day <= days; day++) {
+        table += `<td ondrop="drop(event)" ondragover="allowDrop(event)">
+          <div class="day-number">${day}</div>
+          <div class="icon-dropzone"></div>
+        </td>`;
+        cell++;
+        if (cell % 7 === 0) table += '</tr><tr>';
+      }
+
+      while (cell % 7 !== 0) {
+        table += '<td></td>'; cell++;
+      }
+
+      table += '</tr></tbody></table>';
+      container.innerHTML = table;
+    }
+
+    document.getElementById('prev-month').onclick = () => {
+      currentMonth = currentMonth === 6 ? 8 : currentMonth - 1;
+      generateCalendar(currentMonth);
+    };
+
+    document.getElementById('next-month').onclick = () => {
+      currentMonth = currentMonth === 8 ? 6 : currentMonth + 1;
+      generateCalendar(currentMonth);
+    };
+
+    // Drag-and-drop
+    document.querySelectorAll('.draggable-icon').forEach(icon => {
+      icon.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('type', e.target.dataset.type);
+        e.dataTransfer.setData('src', e.target.src);
+      });
+    });
+
+    function allowDrop(e) {
+      e.preventDefault();
+    }
+
+    function drop(e) {
+      e.preventDefault();
+      const type = e.dataTransfer.getData('type');
+      const src = e.dataTransfer.getData('src');
+      const dropzone = e.target.closest('td').querySelector('.icon-dropzone');
+      if (dropzone && dropzone.childNodes.length < 3) {
+        const img = document.createElement('img');
+img.src = src;
+img.alt = type;
+img.style.width = '54px';   // ⭐ 직접 스타일 지정
+img.style.margin = '3px auto';
+dropzone.appendChild(img);
+
+      }
+    }
+
+    generateCalendar(currentMonth);
+  </script>
+</script>
+</section>
+
+<body>
+  <img class="floating-bacteria" src="u1.png" alt="bacteria">
+
+<script>
+function createBacteria(x, y, vx, vy) {
+  const img = document.createElement('img');
+  img.src = "u1.png";
+  img.className = "floating-bacteria";
+  document.body.appendChild(img);
+
+  img.style.left = `${x}px`;
+  img.style.top = `${y}px`;
+
+  function move() {
+    x += vx;
+    y += vy;
+
+    // 화면 경계 반사
+    if (x <= 0 || x >= window.innerWidth - 60) vx *= -1;
+    if (y <= 0 || y >= window.innerHeight - 60) vy *= -1;
+
+    img.style.left = `${x}px`;
+    img.style.top = `${y}px`;
+
+    if (!img.removed) requestAnimationFrame(move);
+  }
+
+  move();
+
+  // 클릭 시 2~3개로 분열
+  img.addEventListener('click', () => {
+    img.removed = true;
+    img.style.transform = 'scale(2.5) rotate(720deg)';
+    img.style.opacity = '0';
+
+    setTimeout(() => {
+      img.remove();
+      const cloneCount = Math.floor(Math.random() * 2) + 2; // 2 or 3
+      for (let i = 0; i < cloneCount; i++) {
+        const newVX = (Math.random() - 0.5) * 2;
+        const newVY = (Math.random() - 0.5) * 2;
+        createBacteria(x, y, newVX, newVY);
+      }
+    }, 400);
+  });
+}
+
+// 최초 1개 시작
+createBacteria(window.innerWidth / 2, window.innerHeight / 2, 1, 1);
+</script>
+
+<!-- Footer Section -->
+<footer style="text-align: center; padding: 10px 0 40px; background-color: black;">
+  <div style="
+    font-family: burnaby-stencil, sans-serif;
+    font-size: 3vw;
+    color: #00ff00;
+    line-height: 1.2;
+    text-shadow: 2px 2px 6px black;">
+    BATHROOM<br>BIODOME
+  </div>
+  <div style="
+    margin-top: 30px;
+    font-size: 0.9vw;
+    color: white;
+    font-family: 'Spoqa Han Sans Neo', sans-serif;">
+    ©2025 LEESUMIN ALL RIGHTS RESERVED
+  </div>
+</footer>
+
+</body>
+</html>
